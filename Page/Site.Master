@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SILHP.Page.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../App_Themes/Default/StyleSheet.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .naviMenu {
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div class="title">
+
+        <asp:Image ID="Image1" CssClass="imgtitle" runat="server" ImageUrl="~/img/titleptpn.jpg" />
+
+    </div>
+
+    <div class="navigation">
+
+        <asp:Menu ID="Menu1" CssClass="naviMenu" runat="server" ForeColor="#DDDDDD" Height="132px" DisappearAfter="100" BorderStyle="None">
+            <DynamicHoverStyle ForeColor="#1DA1F2" />
+            <Items>
+                <asp:MenuItem Text="HOME" Value="HOME"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Page/Data/DistrikData.aspx" Text="DISTRIK" Value="Distrik"></asp:MenuItem>
+                <asp:MenuItem Text="TAHUN" Value="TAHUN" NavigateUrl="~/Page/Data/TahunData.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Page/Data/LaporanDistrik.aspx" Text="KELOLA LAPORAN" Value="KELOLA LAPORAN"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle ForeColor="#1DA1F2" />
+        </asp:Menu>
+
+    </div>
+    <div class="spasi">
+
+    </div>
+    <div class="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
